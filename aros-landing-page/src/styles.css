@@ -1,7 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
     color-scheme: light dark;
-    background-color:dimgray;
+    --bg: dimgray;
+    --surface: rgb(46, 44, 44);
+    --text: aliceblue;
+    --link: #ffffff;
+    --accent: #38bdf8;
+    --link-hover: var(--accent);
+    background-color: var(--bg);
 }
 
 body {
@@ -10,26 +16,29 @@ body {
 }
 
 p {
-    color:aliceblue;
+    color: var(--text);
 }
 
 article {
     text-align: center;
     margin: 0 auto;
-    background-color:rgb(46, 44, 44);
+    background-color: var(--surface);
     width: 70%;
 }   
 
 section {
     text-align: center;
-    background-color:rgb(46, 44, 44);
+    background-color: var(--surface);
 }
 
 a {
-    color: white;
+    color: var(--link);
     margin: 25px;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
+
+a:hover { color: var(--link-hover); }
 
 h1, h2, p {
     margin: 0;
@@ -41,7 +50,7 @@ h1{
     font-weight: 700;
     line-height: 1.2;
     font-family: sans-serif;
-    color:aliceblue;
+    color: var(--text);
     text-align: center;
 }
 
@@ -49,6 +58,6 @@ h2{
     font-weight: 700;
     line-height: 1.2;
     font-family: sans-serif;
-    color:aliceblue;
+    color: var(--text);
     text-align: center;
 }

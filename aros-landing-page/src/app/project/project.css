@@ -1,3 +1,27 @@
+:host {
+    display: block;
+}
+
+article {
+    text-align: center;
+    margin: 0 auto;
+    background-color: var(--surface);
+    width: 70%;
+}
+
+.project-title {
+    color: var(--text);
+}
+
+.project-description {
+    color: var(--text);
+    line-height: 1.6;
+}
+
 img {
     width: 80%;
+    max-width: 800px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 6px;
 }
