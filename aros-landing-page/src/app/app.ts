@@ -1,12 +1,14 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Project } from './project/project';
+import { TopBar } from './top-bar/top-bar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ Project, TopBar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('aros-landing-page');
+  title = 'Aros';
 }
+

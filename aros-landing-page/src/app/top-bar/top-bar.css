@@ -1,0 +1,49 @@
+:root {
+    --tech-bg: #0f172a;
+    --tech-surface: #1e293b;
+    --tech-accent: #38bdf8;
+    --tech-text: #e2e8f0;
+    --font-code: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--tech-bg);
+    color: var(--tech-text);
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.options-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #334155;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    height: 45px;
+    width: auto;
+    margin: 0;
+    filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.5));
+}
+
+a {
+    font-family: var(--font-code);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #94a3b8;
+    margin: 0 0 0 30px;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: var(--tech-accent);
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
