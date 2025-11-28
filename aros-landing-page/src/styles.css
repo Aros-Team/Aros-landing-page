@@ -1,34 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 :root {
     color-scheme: light dark;
-    --bg: dimgray;
-    --surface: rgb(46, 44, 44);
-    --text: aliceblue;
-    --link: #ffffff;
-    --accent: #38bdf8;
-    --link-hover: var(--accent);
+    --bg: #0b0b0d;
+    --surface: #121316;
+    --text: #e6e8eb;
+    --muted: #a1a6ad;
+    --link: #e6e8eb;
+    --accent: #7dd3fc;
+    --link-hover: #9de3ff;
     background-color: var(--bg);
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     margin: 0 auto;
+    background-color: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-p {
-    color: var(--text);
-}
+p { color: var(--muted); }
 
 article {
     text-align: center;
     margin: 0 auto;
     background-color: var(--surface);
     width: 70%;
-}   
+    border-radius: 12px;
+}
 
 section {
     text-align: center;
@@ -39,10 +45,10 @@ a {
     color: var(--link);
     margin: 25px;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-a:hover { color: var(--link-hover); }
+a:hover { color: var(--link-hover); text-shadow: 0 0 8px rgba(125, 211, 252, 0.35); }
 
 h1, h2, p {
     margin: 0;
@@ -50,10 +56,10 @@ h1, h2, p {
 }
 
 h1{
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    line-height: 1.2;
-    font-family: sans-serif;
+    line-height: 1.15;
+    font-family: 'Inter', sans-serif;
     color: var(--text);
     text-align: center;
 }
@@ -61,7 +67,7 @@ h1{
 h2{
     font-weight: 700;
     line-height: 1.2;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
     color: var(--text);
     text-align: center;
 }

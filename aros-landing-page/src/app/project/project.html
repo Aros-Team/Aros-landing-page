@@ -1,10 +1,11 @@
 <article>
-<h2 class="project-title">Restaurant order system</h2>
-<img class="project-image" src="/Proyecto-muestra.jpeg" alt="Project-aros" width="200">
-<p class="project-description">
-    This is a software dedicated to managing restaurant orders efficiently.
-    It allows waitstaff to take orders directly from tables using tablets or mobile devices, 
-    which are then sent to the kitchen in real-time. The system includes features such as menu management,
-    order tracking, and billing, enhancing the overall dining experience for both customers and staff.
-</p>
+    <div class="projects-container">
+        @for (project of projects; track project.name) {
+            <div class="project-card">
+                <h2>{{ project.name }}</h2>
+                <img [src]="project.images[0]" alt="{{ project.name }}" />
+                <p>{{ project.description }}</p>
+            </div>
+        }
+    </div>
 </article>

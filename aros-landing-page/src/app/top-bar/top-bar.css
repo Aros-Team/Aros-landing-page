@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--surface);
-    border-bottom: 1px solid #5a5a5a;
+    border-bottom: 1px solid #23252a;
     padding: 10px 5%;
     position: sticky;
     top: 0;
@@ -21,9 +21,10 @@ nav a {
     margin-left: 80px;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 nav a:hover { 
     color: var(--link-hover); 
+    text-shadow: 0 0 8px rgba(125, 211, 252, 0.35);
 }
