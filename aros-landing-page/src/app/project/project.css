@@ -2,15 +2,6 @@
     display: block;
 }
 
-article {
-    text-align: center;
-    margin: 0 auto;
-    background-color: var(--surface);
-    width: 70%;
-    border-radius: 16px;
-    padding: 24px;
-}
-
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

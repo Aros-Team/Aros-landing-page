@@ -61,7 +61,7 @@ a {
 }
 
 a:hover { 
-    color: var(--link-hover); text-shadow: 0 0 8px rgba(125, 211, 252, 0.35); 
+    color: var(--link-hover); text-shadow: 0 0 8px rgba(255, 255, 255, 0.35); 
 }
 
 h1, h2, p {

@@ -16,10 +16,6 @@
     margin: 0;
 }
 
-nav a:hover { 
-    color: var(--link-hover); 
-    text-shadow: 0 0 8px rgba(125, 211, 252, 0.35);
-}
 
 @media (max-width: 600px) {
     .top-bar {
