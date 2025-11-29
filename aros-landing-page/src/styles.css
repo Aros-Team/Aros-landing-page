@@ -26,7 +26,10 @@ html {
     scroll-behavior: smooth;
 }
 
-p { color: var(--muted); }
+p { 
+    color: var(--muted);
+    text-align:center;
+}
 
 article {
     text-align: center;
@@ -36,6 +39,14 @@ article {
     border-radius: 12px;
 }
 
+@media (max-width: 600px){
+    article {
+        width: min(90%, 1200px);  /* Entre 90% y máx 1200px */
+        padding: clamp(1rem, 3vw, 2rem);  /* Padding fluido */
+        margin: 2rem auto;
+    }
+}
+
 section {
     text-align: center;
     background-color: var(--surface);
@@ -43,12 +54,15 @@ section {
 
 a {
     color: var(--link);
+    font-size: 0.97rem;
     margin: 25px;
     text-decoration: none;
     transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-a:hover { color: var(--link-hover); text-shadow: 0 0 8px rgba(125, 211, 252, 0.35); }
+a:hover { 
+    color: var(--link-hover); text-shadow: 0 0 8px rgba(125, 211, 252, 0.35); 
+}
 
 h1, h2, p {
     margin: 0;

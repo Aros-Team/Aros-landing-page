@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-project',
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './project.html',
   styleUrl: './project.css',
 })
