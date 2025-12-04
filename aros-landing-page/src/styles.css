@@ -41,8 +41,8 @@ article {
 
 @media (max-width: 600px){
     article {
-        width: min(90%, 1200px);  /* Entre 90% y máx 1200px */
-        padding: clamp(1rem, 3vw, 2rem);  /* Padding fluido */
+        width: min(90%, 1200px);
+        padding: clamp(1rem, 3vw, 2rem);
         margin: 2rem auto;
     }
 }
