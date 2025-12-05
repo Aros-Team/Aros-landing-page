@@ -1,14 +1,14 @@
 <div class="chat-container">
   
   <div class="chat-header">
-    <h3>Asistente Virtual </h3>
+    <h3>Aroshi </h3>
   </div>
 
-  <div class="messages-area">
-    
+  <div class="messages-area" #chatContainer>
+
     @for (msg of messages; track $index) {
       <div class="message-bubble" [class.user]="msg.role === 'user'">
-        <strong>{{ msg.role === 'user' ? 'Yo' : 'Botsito Aros' }}:</strong>
+        <strong>{{ msg.role === 'user' ? 'Yo' : 'Aroshi' }}:</strong>
         <p>{{ msg.text }}</p>
       </div>
     }
