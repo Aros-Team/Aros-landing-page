@@ -1,34 +1,40 @@
-<div class="chat-container">
-  
-  <div class="chat-header">
-    <h3>Aroshi </h3>
+@if (isChatOpened) {
+  <div class="chat-container">
+    
+    <div class="chat-header" (click)="toggleChat()">
+      <h3>Aroshi</h3>
+      <button class="close-button">&times;</button>
+    </div>
+
+    <div class="messages-area" #chatContainer>
+
+      @for (msg of messages; track $index) {
+        <div class="message-bubble" [class.user]="msg.role === 'user'">
+          <strong>{{ msg.role === 'user' ? 'Yo' : 'Aroshi' }}:</strong>
+          <p>{{ msg.text }}</p>
+        </div>
+      }
+
+      @if (isLoading) {
+        <div class="message-bubble bot loading">
+          Escribiendo...
+        </div>
+      }
+
+    </div>
+
+    <div class="input-area">
+      <input 
+        [(ngModel)]="userMessage" 
+        (keydown.enter)="sendMessage()"
+        placeholder="Escribe tu idea aquí..." 
+        type="text"
+      />
+      <button (click)="sendMessage()">Enviar</button>
+    </div>
   </div>
-
-  <div class="messages-area" #chatContainer>
-
-    @for (msg of messages; track $index) {
-      <div class="message-bubble" [class.user]="msg.role === 'user'">
-        <strong>{{ msg.role === 'user' ? 'Yo' : 'Aroshi' }}:</strong>
-        <p>{{ msg.text }}</p>
-      </div>
-    }
-
-    @if (isLoading) {
-      <div class="message-bubble bot loading">
-        Escribiendo...
-      </div>
-    }
-
+} @else {
+  <div class="chat-icon" (click)="toggleChat()">
+    <img class="chat-icon-image" src="/Logo-chat-bot.png" alt="Chat Icon" />
   </div>
-
-  <div class="input-area">
-    <input 
-      [(ngModel)]="userMessage" 
-      (keydown.enter)="sendMessage()"
-      placeholder="Escribe tu idea aquí..." 
-      type="text"
-    />
-    <button (click)="sendMessage()">Enviar</button>
-  </div>
-
-</div>
+}

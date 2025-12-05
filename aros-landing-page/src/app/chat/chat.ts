@@ -19,13 +19,17 @@ export class Chat {
 
   isLoading: boolean = false;
 
-  toggle: boolean = false;
+  isChatOpened: boolean = false;
   
   @ViewChild('chatContainer') private chatContainer!: ElementRef;
 
   constructor(private geminiService: Gemini, private emailService: EmailService) {}
 
-  scrollToBottom(): void {
+  toggleChat() {
+  this.isChatOpened = !this.isChatOpened;
+  }
+
+  scrollToBottom() {
     requestAnimationFrame(() => {
       this.chatContainer.nativeElement.scrollTop = this.chatContainer.nativeElement.scrollHeight;
     });

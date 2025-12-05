@@ -35,7 +35,7 @@ article {
     text-align: center;
     margin: 0 auto;
     background-color: var(--surface);
-    width: 70%;
+    width: 80%;
     border-radius: 12px;
 }
 
@@ -43,9 +43,9 @@ article {
     article {
         width: min(90%, 1200px);
         padding: clamp(1rem, 3vw, 2rem);
-        margin: 2rem auto;
+        margin: 0.5rem auto;
     }
-}
+}   
 
 section {
     text-align: center;
@@ -54,8 +54,7 @@ section {
 
 a {
     color: var(--link);
-    font-size: 0.97rem;
-    margin: 25px;
+    font-size: 0.84rem;
     text-decoration: none;
     transition: color 0.2s ease, text-shadow 0.2s ease;
 }
